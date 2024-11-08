@@ -77,7 +77,7 @@ const TaskGridView = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ml-24 mr-0 xl:mr-36 mt-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ml-16 md:ml-24 mr-0 xl:mr-36 mt-5">
       {tasks?.map((task, index: number) => (
         <Card
           key={index}
@@ -105,7 +105,7 @@ const TaskGridView = () => {
               {task.completed ? "Completed" : "In progress"}
             </span>
             <CardDescription>
-              <div className="flex gap-1">
+              <div className="flex gap-2 pt-4 iphone5:pt-0">
                 <BsThreeDotsVertical className="size-5 cursor-pointer text-gray-400" />
                 <AlertDialog>
                   <AlertDialogTrigger>
@@ -144,7 +144,7 @@ const TaskGridView = () => {
           </CardContent>
           <CardFooter>
             <AvatarGroup avatarSize={7} />
-            <div className="inline-flex items-center gap-1.5">
+            <div className="pt-4 iphone5:pt-0 inline-flex items-center gap-1.5">
               <AiOutlineMessage className="size-6 text-gray-400" />
               <span className="text-gray-400">3</span>
             </div>

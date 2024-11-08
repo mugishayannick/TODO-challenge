@@ -19,7 +19,7 @@ const ProjectDashboard: React.FC = () => {
       <TopNavigation />
 
       <div className="relative flex-1 p-6 sm:p-7 overflow-y-auto">
-        <div className="flex flex-wrap pl-24 pr-0 xl:pr-[360px] 2xl:pr-[390px] pt-28 justify-between">
+        <div className="flex flex-wrap pl-16 md:pl-24 pr-0 xl:pr-[360px] 2xl:pr-[390px] pt-28 justify-between">
           <div className="space-y-4">
             <BreadCrumb />
             <h1 className="text-3xl font-bold tracking-wide leading-loose">
@@ -32,16 +32,16 @@ const ProjectDashboard: React.FC = () => {
             <span className="text-gray-400">Updated 12 min ago</span>
           </div>
         </div>
-        <div className="flex flex-wrap space-y-6 sm:space-y-0 mt-4 pl-24 pr-0 xl:pr-[360px] 2xl:pr-[390px] items-center justify-between">
+        <div className="flex flex-wrap space-y-6 sm:space-y-0 mt-4 pl-16 md:pl-24 pr-0 xl:pr-[360px] 2xl:pr-[390px] items-center justify-between">
           <div className="flex flex-wrap sm:divide-x-2 sm:divide-gray-400">
             <div className="flex gap-3 items-center pr-5 pb-6 sm:pb-0">
               <SlLockOpen className="size-6 text-gray-400" />
               <span>Limited Access</span>
               <IoIosArrowDown className="size-6 text-gray-400" />
             </div>
-            <div className="flex gap-6 items-center sm:pl-5">
+            <div className="flex flex-wrap gap-6 items-center sm:pl-5">
               <AvatarGroup />
-              <span className="flex mx-auto bg-purple-600 size-10 select-none items-center justify-center rounded-full align-middle">
+              <span className="flex md:mx-auto bg-purple-600 size-10 select-none items-center justify-center rounded-full align-middle">
                 <GoPlus className="text-white rounded-[inherit] cursor-pointer size-7" />
               </span>
             </div>
