@@ -16,7 +16,7 @@ const ProjectOverview: React.FC = () => {
         </span>
         <span className="text-md text-gray-400">See all</span>
       </div>
-      <div className="bg-gray-100 relative mt-4 pt-6 pb-9 pl-8  rounded-lg space-y-5">
+      <div className="bg-gray-100 dark:bg-gray-700 relative mt-4 pt-6 pb-9 pl-8  rounded-lg space-y-5">
         <span className="absolute top-1/2 translate-y-[-50%] rounded-tr-lg rounded-br-lg left-0 h-28 w-1.5 bg-purple-800"></span>
         <div className="flex gap-6">
           <div className="flex items-center gap-1.5">
@@ -82,7 +82,7 @@ const ProjectOverview: React.FC = () => {
                   <span className="text-xl font-medium">Devid Mackurat</span>
                   <span className="text-sm text-gray-400">12:33 AM</span>
                 </div>
-                <div className="flex justify-between bg-gray-100 py-5 px-4 mt-3 rounded-lg flex-1">
+                <div className="flex justify-between bg-gray-100 dark:bg-gray-700 py-5 px-4 mt-3 rounded-lg flex-1">
                   <span>Have a great working week!</span>
                   {index === 1 && (
                     <BsExclamationCircle className="size-4 text-purple-700" />
@@ -95,7 +95,7 @@ const ProjectOverview: React.FC = () => {
       <div className="mt-2 relative group">
         <input
           placeholder="Your messages.."
-          className="w-full bg-gray-100 px-5 py-4 rounded-lg group-hover:cursor-pointer"
+          className="w-full bg-gray-100 dark:bg-gray-700 px-5 py-4 rounded-lg group-hover:cursor-pointer"
           type="text"
         />
         <div className="absolute translate-y-[-50%] top-1/2 right-5 flex group-hover:cursor-pointer">
