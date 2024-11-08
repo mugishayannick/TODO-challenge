@@ -92,15 +92,15 @@ const ProjectOverview: React.FC = () => {
             </div>
           ))}
       </div>
-      <div className="mt-2 relative">
+      <div className="mt-2 relative group">
         <input
           placeholder="Your messages.."
-          className="w-full bg-gray-100 px-5 py-4 rounded-lg"
+          className="w-full bg-gray-100 px-5 py-4 rounded-lg group-hover:cursor-pointer"
           type="text"
         />
-        <div className="absolute translate-y-[-50%] top-1/2 right-5 inline-flex divide-x-1 divide-gray-400">
-          <MdOutlineKeyboardVoice className="size-7 mr-4 text-gray-400 border-r" />
-          <FiSend className="size-7 mr-4 stroke-purple-800" />
+        <div className="absolute translate-y-[-50%] top-1/2 right-5 flex group-hover:cursor-pointer">
+          <MdOutlineKeyboardVoice className="size-7 mr-2  text-gray-400 " />
+          <FiSend className="size-8 pl-2 stroke-purple-800 border-l-2 border-gray-400" />
         </div>
       </div>
     </div>
