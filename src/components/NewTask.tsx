@@ -94,7 +94,7 @@ const NewTaskModal = () => {
                 <SelectTrigger className="w-[inherit]">
                   <SelectValue placeholder="Completed" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="dark:border-gray-500">
                   <SelectItem value="true">True</SelectItem>
                   <SelectItem value="false">False</SelectItem>
                 </SelectContent>

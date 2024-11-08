@@ -94,7 +94,14 @@ const TaskGridView = () => {
             ""
           )}
           <CardHeader className={cn(index % 2 === 0 ? "" : "mt-5")}>
-            <span className="bg-orange-50 rounded-lg py-1 px-4 text-md text-orange-300 font-semibold">
+            <span
+              className={cn(
+                " rounded-lg py-1 px-4 text-md font-semibold",
+                task.completed
+                  ? "text-green-500 bg-green-50"
+                  : "text-orange-300 bg-orange-50"
+              )}
+            >
               {task.completed ? "Completed" : "In progress"}
             </span>
             <CardDescription>
