@@ -1,8 +1,8 @@
 import React from "react";
 import { VscListFilter } from "react-icons/vsc";
-import { GoPlus } from "react-icons/go";
 import { cn } from "@/lib/utils";
 import TaskGridView from "./TaskGridView";
+import NewTaskModal from "./NewTask";
 
 const ITEM_TABS = [
   {
@@ -58,10 +58,7 @@ const TaskOverview: React.FC = () => {
             <VscListFilter className="size-6 text-gray-400" />
             <span>Filter & Sort</span>
           </button>
-          <button className="flex border rounded-lg py-2 px-4 items-center gap-3">
-            <GoPlus className="size-6 text-gray-400" />
-            <span>New Task</span>
-          </button>
+          <NewTaskModal />
         </div>
       </div>
       <TaskGridView />
