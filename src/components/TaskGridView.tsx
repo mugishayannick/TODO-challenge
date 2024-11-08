@@ -9,11 +9,11 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import AvatarGroup from "./common/AvatarGroup";
 import { AiOutlineMessage } from "react-icons/ai";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { fetchTodo } from "@/api/fetchTodo";
 import { Task1 } from "@/utils/data/images";
-import { useNewTaskStore } from "@/store/useNewTaskStore";
+import { useTasksStore } from "@/store/useTasksStore";
 import { FaTrash } from "react-icons/fa";
 import {
   AlertDialog,
@@ -37,7 +37,8 @@ export type TasksData = {
 };
 
 const TaskGridView = () => {
-  const [tasks, setTasks] = useState<TasksData[]>([]);
+  const tasks = useTasksStore((state) => state.allTasks);
+  const setTasks = useTasksStore((state) => state.setAllTasks);
   const { data, isLoading, isError } = useQuery({
     queryKey: ["todo"],
     queryFn: fetchTodo,
@@ -50,13 +51,13 @@ const TaskGridView = () => {
     },
   });
 
-  const newTasks = useNewTaskStore((state) => state.newTasks);
+  const newTasks = useTasksStore((state) => state.newTasks);
 
   useEffect(() => {
     // Concatenate newTasks to the existing tasks from API
     const combinedTasks = (data?.todos || []).concat(newTasks);
     setTasks(combinedTasks);
-  }, [data, newTasks]);
+  }, [data, newTasks, setTasks]);
 
   if (isLoading) {
     return <div>Loading tasks...</div>;
@@ -68,6 +69,11 @@ const TaskGridView = () => {
 
   const handleDeleteTask = (id: number) => {
     deleteTask(id);
+    const clonedTasks = [...tasks];
+
+    const updatedTasks = clonedTasks.filter((t) => t.id !== id);
+
+    setTasks(updatedTasks);
   };
 
   return (
