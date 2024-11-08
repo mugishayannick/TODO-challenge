@@ -22,7 +22,7 @@ const TopNavigation: React.FC = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="flex fixed pl-32 pr-[415px] z-10 top-0 right-0 left-0 items-center justify-between p-7 bg-white dark:bg-gray-900 border-b dark:border-gray-700">
+    <div className="flex fixed pl-32 xl:pr-[385px] 2xl:pr-[415px] z-10 top-0 right-0 left-0 items-center justify-between p-7 bg-white dark:bg-gray-900 border-b dark:border-gray-700">
       <div className="relative hidden md:flex items-center w-full max-w-md">
         <input
           type="text"
@@ -42,7 +42,7 @@ const TopNavigation: React.FC = () => {
         <RiSearch2Line className="absolute right-3 h-5 w-5 text-gray-500 dark:text-gray-400" />
       </div>
 
-      <div className="flex items-center gap-5">
+      <div className="flex items-center justify-between md:justify-end w-full md:w-auto gap-5">
         <button
           onClick={handleToggleTheme}
           className="p-2 rounded-lg focus:outline-none bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200"
