@@ -19,14 +19,14 @@ import {
 import { addTodo } from "@/api/addTodo";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast, { Toaster } from "react-hot-toast";
-import { useNewTaskStore } from "@/store/useNewTaskStore";
+import { useTasksStore } from "@/store/useTasksStore";
 
 const NewTaskModal = () => {
   const queryClient = useQueryClient();
   const [open, setOpen] = useState(false);
   const [taskName, setTaskName] = useState("");
   const [completed, setCompleted] = useState(false);
-  const setNewTasks = useNewTaskStore((state) => state.setNewTask);
+  const setNewTasks = useTasksStore((state) => state.setNewTask);
   const { mutate: addTask } = useMutation({
     mutationFn: addTodo,
     onSuccess: (response) => {
