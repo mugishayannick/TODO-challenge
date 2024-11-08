@@ -50,10 +50,10 @@ const NewTaskModal = () => {
   };
 
   return (
-    <div>
+    <div className="w-full md:w-auto">
       <button
         onClick={() => setOpen(true)}
-        className="flex border rounded-lg py-2 px-4 items-center gap-3"
+        className="w-[inherit] flex border rounded-lg py-2 px-4 items-center gap-3"
       >
         <GoPlus className="size-6 text-gray-400" />
         <span>New Task</span>

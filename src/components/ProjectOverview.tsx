@@ -9,7 +9,7 @@ import { FiSend } from "react-icons/fi";
 
 const ProjectOverview: React.FC = () => {
   return (
-    <div className="fixed right-0 w-[390px] bg-white dark:bg-gray-900 z-30 h-full pt-9 px-7 shadow-md">
+    <div className="fixed right-0 hidden xl:block 2xl:w-[390px] bg-white dark:bg-gray-900 z-30 h-full pt-9 px-7 shadow-md">
       <div className="flex justify-between">
         <span className="text-md font-semibold mb-4 text-gray-800 dark:text-gray-100">
           Project Overview

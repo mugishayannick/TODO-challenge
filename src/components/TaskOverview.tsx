@@ -26,9 +26,9 @@ const ITEM_TABS = [
 const TaskOverview: React.FC = () => {
   return (
     <div className="mt-9">
-      <div className="flex ml-24 mr-[390px] h-full justify-between rounded-xl bg-white dark:bg-gray-900">
+      <div className="flex flex-wrap ml-24 xl:mr-[360px] 2xl:mr-[390px] justify-between rounded-xl bg-white dark:bg-gray-900">
         <div className="px-4">
-          <ul className="inline-flex gap-5 h-full">
+          <ul className="flex flex-wrap gap-2 md:gap-5 h-full">
             {ITEM_TABS.map((item, index) => (
               <li
                 key={index}
@@ -53,8 +53,8 @@ const TaskOverview: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="flex gap-4 p-4">
-          <button className="flex border rounded-lg py-2 px-4 gap-3">
+        <div className="flex flex-wrap gap-4 p-4">
+          <button className="w-full md:w-auto flex border rounded-lg py-2 px-4 gap-3">
             <VscListFilter className="size-6 text-gray-400" />
             <span>Filter & Sort</span>
           </button>
