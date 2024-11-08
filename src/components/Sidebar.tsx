@@ -10,13 +10,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 const Sidebar = () => {
   return (
-    <div className="fixed inset-y-0 z-20 left-0 flex flex-col w-24 bg-white dark:bg-gray-900 h-screen py-5 shadow-sm">
-      <img src={RandomLogo} alt="logo" className="size-16 mx-auto" />
+    <div className="fixed inset-y-0 z-20 left-0 flex flex-col w-16 sm:w-24 bg-white dark:bg-gray-900 h-screen py-5 shadow-sm">
+      <img src={RandomLogo} alt="logo" className="size-9 md:size-16 mx-auto" />
       <div className="mt-11">
-        <ul className="space-y-7">
+        <ul className="space-y-4 md:space-y-7">
           <li className="relative rounded-sm p-2">
             <span className="absolute inset-0 h-11 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg z-50"></span>
-            <span className="absolute inset-0 h-11 w-9 bg-gradient-to-r from-purple-100 to-white dark:bg-none z-10"></span>
+            <span className="absolute inset-0 h-11 w-5 md:w-9 bg-gradient-to-r from-purple-100 to-white dark:bg-none z-10"></span>
             <GoHome className="text-purple-600 size-7 mx-auto cursor-pointer" />
           </li>
           <li>
@@ -32,8 +32,8 @@ const Sidebar = () => {
             <LuFileLineChart className="text-gray-400 size-7 mx-auto cursor-pointer" />
           </li>
         </ul>
-        <div className="mt-11 py-9 space-y-4 w-full border-y-2 border-gray-200 dark:border-gray-500">
-          {Array(3)
+        <div className="mt-11 py-5 md:py-9 space-y-4 w-full border-y-2 border-gray-200 dark:border-gray-500">
+          {Array(2)
             .fill(null)
             .map((_, index) => (
               <Avatar

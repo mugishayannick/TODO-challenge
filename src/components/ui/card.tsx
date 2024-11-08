@@ -23,7 +23,10 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex justify-between pb-6 px-6", className)}
+    className={cn(
+      "flex flex-wrap items-center justify-between pb-6 px-6",
+      className
+    )}
     {...props}
   />
 ));
@@ -67,7 +70,10 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex justify-between items-center p-6 pt-0", className)}
+    className={cn(
+      "flex flex-wrap justify-between items-center p-6 pt-0",
+      className
+    )}
     {...props}
   />
 ));

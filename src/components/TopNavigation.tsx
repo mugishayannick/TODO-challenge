@@ -22,7 +22,7 @@ const TopNavigation: React.FC = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="flex fixed pl-32 xl:pr-[385px] 2xl:pr-[415px] z-10 top-0 right-0 left-0 items-center justify-between p-7 bg-white dark:bg-gray-900 border-b dark:border-gray-700">
+    <div className="flex fixed pl-20 md:pl-32 xl:pr-[385px] 2xl:pr-[415px] z-10 top-0 right-0 left-0 items-center justify-between py-5 px-7 bg-white dark:bg-gray-900 border-b dark:border-gray-700">
       <div className="relative hidden md:flex items-center w-full max-w-md">
         <input
           type="text"
